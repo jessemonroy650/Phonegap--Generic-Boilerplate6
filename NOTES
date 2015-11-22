@@ -1,19 +1,37 @@
 ## NOTES ##
 Date: 2015-11-21
 
+- Phonegap Compiler Version: cli-5.2.0
+- Test Device: LG Leon LTE
+- Android Version: 5.1.1
+- Test Device: Apple iPodtouch
+- iOS Version: 8.4.1
 
 1. Started with [Generic-Boilerplate5](https://github.com/jessemonroy650/Phonegap--Generic-Boilerplate5)
 2. Update `[README.md](README.md)` description
 3. Update `config.xml` (versions, description, add core plugins)
 4. Get version numbers after doing a successful default build
 5. Updated `config.xml` based on suggestions from 'Plugins' tab
-6. Add crosswalk
+6. Add Crosswalk
 7. Updated plugin version numbers after successful build
 8. Added updates per http://phonegap.com/blog/2015/11/19/config_xml_changes_part_two/
     - `gap:plugin` -> `plugin`, `version` -> `spec`, `gap:config-file` -> `config-file`
 9. Add `<platform name="windows" />`
-    - What are the `name` Blackberry? http://phonegap.com suggests there are others, but https://build.phonegap.com/ only suggests iOS,Android,Windows
+    QUESTION - What are the `name` Blackberry? http://phonegap.com suggests there are others, but https://build.phonegap.com/ only suggests iOS,Android,Windows
 10. Added Icons and Splash Screens from [Phonegap-Splashscreen-Test](https://github.com/jessemonroy650/Phonegap-Splashscreen-Test)
 11. Placed Icons and Splash Screens in appropriate `<platform (...)>` wrappers, and removed attributes from related elements.
-    - blog does not address, `gap:qualifier` and `gap:density`?
-    - what are valid children of `<platform (...)>` - `<icon>,<splash>,<preference>,<plugin>,'whitelist'`?
+    QUESTION - blog does not address, `gap:qualifier` and `gap:density`?
+    QUESTION - what are valid children of `<platform (...)>` - `<icon>,<splash>,<preference>,<plugin>,'whitelist'`?
+12. BUG - Just notice `CSP` not working.
+13. Removed Crosswalk to test `CSP`
+14. Andriod Loads 72x72 icon and 480x800 Splash Screen.
+    - load order -> Splash, alert("body loaded"), alert("deviceready") 
+    - [button] fires `alert()`, which goes through function
+    - [Exit] fires, but does not clear properly, and splash screen does not load
+15. Test on iOS
+16. iOS Loads 120x120 icon and 640x1136 Splash Screen.
+    - load order -> Splash, alert("body loaded"), alert("deviceready"), alert("got iOS")
+    - Splash screen does not unload.
+
+
+
