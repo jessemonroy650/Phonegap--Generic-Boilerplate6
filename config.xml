@@ -53,7 +53,7 @@
             <splash src="res/android/splashscreen-320x480-mdpi.png"   gap:qualifier="port-mdpi" />
             <splash src="res/android/splashscreen-480x800-hdpi.png"   gap:qualifier="port-hdpi" />
             <splash src="res/android/splashscreen-720x1280-xhdpi.png" gap:qualifier="port-xhdpi" />
-        </platform
+        </platform>
 
         <!-- iOS * iOS * iOS -->
         <platform name="ios" >
@@ -74,7 +74,7 @@
             <splash src="res/ios/splashscreen-landscape~iphone-1136x640.png" width="1136" height="640" />
             <splash src="res/ios/splashscreen-portrait~ipad-768x1024.png"    width="768" height="1024" />
             <splash src="res/ios/splashscreen-landscape~ipad-1024x768.png"   width="1024" height="768" />
-        </platform
+        </platform>
 
         <!-- PLUGINS PLUGINS -->
         <!-- spec="" follows the syntax of https://docs.npmjs.com/cli/install -->
